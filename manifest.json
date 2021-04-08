@@ -1,0 +1,24 @@
+{
+    "name": "Shufersal for flatmates",
+    "version": "1.0",
+    "description": "Split Shufersal receipts",
+    "permissions": [
+        "tabs",
+        "activeTab"
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://shufersal.co.il/*", "https://*.shufersal.co.il/*"],
+            "css": ["css/shufersal.css"],
+            "js": ["js/shufersal.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": [
+        "app/*"
+    ],
+    "manifest_version": 2
+}
